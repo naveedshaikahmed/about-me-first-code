@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="c:\Users\91934\OneDrive\Ramzan.jpg">
+    <title>Naveed Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2eb;
+            color: #3e5537;
+            text-align: center;
+            padding: 20px;
+            background-image: url('https://www.wallpapertip.com/wmimgs/38-388110_background-wallpaper-colorful-website-background-design.jpg'); /* Correctly set background image */
+            background-size:total; /* Ensures the background image covers the entire page */
+            background-repeat: no-repeat; /* Prevents the background image from repeating */
+            background-attachment: fixed; /* Keeps the background image fixed when scrolling */
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 4px;
+            font-size: 24px;
+            color: #3e5537;
+            text-decoration: none;
+        }
+
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+        }
+        .about {
+
+            top:20px;
+
+        }
+        .school{
+            text-align: left;
+        }
+        .skills{
+            text-align: left;
+        }
+        .button{
+            background-color: #1b9959;
+            color:white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3 ease,transform 0.3 ease;
+        }
+        .button:hover {
+            background-color: #158e51;
+            transform: translateY(-2px);
+        }
+        .p1{
+            font-size: large;
+            text-align: center;
+            font-weight: bold;
+            
+        }
+        .p2{
+            text-align: justify;
+        }
+        .p5{
+            text-align: justify;
+        }
+        nav {
+            position: relative;
+            z-index: 1;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav.before.active-element {
+            transform: rotateY(180deg);
+        }
+        #menuToggle {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        #menuToggle input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            left:-30px;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+            -webkit-touch-callout: none;
+            user-select: none;
+        }
+
+        #menuToggle span {
+            display: block;
+            width: 33px;
+            height: 5px;
+            margin-bottom: 5px;
+            position: relative;
+            background: #cdcdcd;
+            border-radius: 5px;
+            z-index: 1;
+            transform-origin: 5px 0px;
+            transition: all 0.5s ease;
+        }
+
+        #menuToggle span:first-child {
+            transform-origin: 0% 0%;
+        }
+
+        #menuToggle span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+
+        #menuToggle input:checked ~ span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: #232323;
+        }
+
+        #menuToggle input:checked ~ span:nth-last-child(2) {
+            opacity: 1;
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        #menuToggle input:checked ~ span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        #menu {
+            position: absolute;
+            width: 100px;
+            margin: -150px 0 0 -150px;
+            padding: 50px;
+            padding-top: 125px;
+            background-image: url("https://marketingaccesspass.com/wp-content/uploads/2015/10/Podcast-Website-Design-Background-Image.jpg");
+            list-style-type: none;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s ease;
+        }
+
+        #menu li {
+            padding: 10px 0;
+            font-size: 22px;
+        }
+        
+        
+
+        #menuToggle input:checked ~ ul {
+            transform: none;
+        }
+        .html{
+            font-size: 30px;
+            background: url("https://wallpaperaccess.com/full/806272.jpg");
+            background-clip: text;
+            color: transparent;
+            animation: move 1s infinite;
+        }
+        @keyframes move{
+            100%{
+                background-position-x: 250px;
+            }
+        }
+        .html1{
+            font-size: 50px;
+            background: url("https://wallpaperaccess.com/full/806272.jpg");
+            background-clip: text;
+            color: transparent;
+            animation: move 1s infinite;
+        }
+        .html3{
+            font-size: 20px;
+            background: url("https://wallpaperaccess.com/full/806272.jpg");
+            background-clip: text;
+            color: transparent;
+            animation: move 1s infinite;
+        }
+        .html4{
+            text-align: justify;
+            font-size: 15px;
+            background: url("https://wallpaperaccess.com/full/806272.jpg");
+            background-clip: text;
+            color: transparent;
+            animation: move 1s infinite;
+        }
+        .p1{
+            font-size: 20px;
+            background: url("https://wallpaperaccess.com/full/806272.jpg");
+            background-clip: text;
+            color: transparent;
+            animation: move 1s infinite;
+        }
+    </style>
+</head>
+<body id="Home">
+    
+    <div class="container">
+        <div id="menuToggle" style="color: black;">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu" style="color: azure;">
+                <a href="#Home" style="color: azure;"><li>Home</li></a>
+                <a href="#AboutMe" style="color: azure;"><li>About</li></a>
+                <a href="#Servises" style="color: azure;"><li>Services </li></a>
+                <a href="#ContactMe" style="color: azure;"><li>Contact</li></a>
+            </ul>
+        </div>
+
+        <h1>MY PORTFOLIO</h1>
+        <div class="profile-pic">
+            <img src="c:\Users\91934\OneDrive\Pictures\Naveed image.png" alt="Profile Picture">
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+            <b><p class="html3">SHAIK NAVEED AHMED</p></b>
+        </div>
+        <p id="AboutMe">
+        <p class="about"><b>ABOUT ME</b></p>
+        Meet <b>Shaik Naveed Ahmed</b>, I am a passionate and dedicated developer with a strong foundation in programming and web design. My expertise includes <b>C, Python, HTML, CSS, JavaScript, and web design</b> using <b>Figma</b>. I am continuously expanding my technical skill set by learning languages like <b>Java, ML,etc.</b>
+        <br><br><input class='button' type="submit" value="See More"></p>
+        <br><p id="Servises">
+        <b class="myservices"><h2><p class="html1">MY SERVICES</p></h2></b>
+        <img src="https://chatgptbuz.com/wp-content/uploads/2023/07/programminng-languages-for-ai-scaled-1.jpg" alt="img" style="height: 250px; width: 300px;">
+        <p class="htmlpic">
+        <p class="html"><b>HTML AND CSS</b></p>
+         I'm highly proficient in HTML and CSS, with years of experience in web development. I can design and websites to meet my clients' needs.
+         <br><b></b>
+        <p class="html">PYTHON</p></b>
+"I excel in Python programming. With extensive experience, I write clean, efficient code for web development, data analysis, and learning.
+        <b><p class="html">JavaScript</p></b>
+        "I am a proficient JavaScript developer with extensive experience in building dynamic and interactive web applications. I can write clean, efficient, and maintainable code that enhances user experience and ensures optimal performance."
+        <b><p class="html">Web Design using Figma</p></b>
+        "I am a skilled web designer with extensive experience in using Figma to create visually appealing and user-friendly interfaces. I excel at designing responsive websites and applications that provide an intuitive user experience."</p>
+       <br><br> <hr></p>
+       <p class="tag1">
+        <p id="ContactMe">
+       <p class="p1">Contact Me:</p>
+       <hr>
+       
+       <p class="html4">Phone No:- 9346150388</p>
+       <p class="html4">Email:- na2005eed@gmail.com</p>
+       <hr><p class="p5">
+       <b>Address:-</b> <br></p>
+       <p class="html4">Kalasalingam University <br>
+       Krishnankovil,VirudhNagar Dist. <br>
+       626126</p>
+    </p>
+    </p>
+    
+    </div>
+
+</body>
+</html>
